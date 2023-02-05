@@ -1,10 +1,8 @@
 import './styles/index.scss';
-import { Suspense } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
+import { AppRouter } from './providers/router';
 
 const App = () => {
   
@@ -15,12 +13,7 @@ const App = () => {
       <button onClick={toggleTheme}>Change Theme</button>
       <NavLink to={'/'}>Домой</NavLink>
       <NavLink to={'/about'}>О нас</NavLink>
-      <Suspense fallback={<h1>Загрузка...</h1>}>
-        <Routes>
-          <Route path="/" element={<MainPage />}/>
-          <Route path="/about" element={<AboutPage />}/>
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
