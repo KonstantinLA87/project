@@ -1,6 +1,7 @@
 import cls from './Sidebar.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, useState } from 'react';
+import { Button } from 'shared/ui/Button/Button';
 
 interface SidebarProps {
   className?: string;
@@ -16,7 +17,7 @@ export const Sidebar: FC<SidebarProps> = ({className}) => {
 
   return (
     <div className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
-      <button onClick={onToggle}>toggle</button>
+      <Button onClick={onToggle}>toggle</Button>
     </div>
   );
 };

@@ -1,7 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 const MainPaige = () => {
+  
+  const {t} = useTranslation('main');
+
   return (
-    <div className="page-wrapper">
-      <h1>Main page</h1>
+    <div>
+      <h1>{t("title")}</h1>
     </div>
   );
 };

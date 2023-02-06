@@ -4,13 +4,20 @@
   height: var(--navbar-height);
   align-items: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background: var(--navbar-bg);
+}
+
+.navbar__right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .links {
   a {
     text-decoration: none;
+    font-size: 17px;
   }
   a + a {
     margin-left: 30px;
