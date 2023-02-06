@@ -1,19 +1,18 @@
 import cls from './NavBar.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC } from "react";
-import { AppLink } from "shared/ui/AppLink/AppLink";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
-import { LangSwitcher } from "shared/ui/LangSwitcher/ui/LangSwitcher";
+import { FC } from 'react';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { LangSwitcher } from 'shared/ui/LangSwitcher/ui/LangSwitcher';
 import { useTranslation } from 'react-i18next';
 
 interface NavBarProps {
-  className?: string;
+  className?: string
 }
 
-export const NavBar: FC<NavBarProps> = ({className}) => {
+export const NavBar: FC<NavBarProps> = ({ className }) => {
+  const { t } = useTranslation();
 
-  const { t, i18n } = useTranslation();
-  
   return (
     <div className={classNames(cls.NavBar, {}, [className])}>
       <div className={cls.links}>

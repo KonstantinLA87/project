@@ -4,19 +4,18 @@ import { FC, useState } from 'react';
 import { Button } from 'shared/ui/Button/Button';
 
 interface SidebarProps {
-  className?: string;
+  className?: string
 }
 
-export const Sidebar: FC<SidebarProps> = ({className}) => {
-
+export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const onToggle = () => {
+  const onToggle = (): void => {
     setCollapsed(collapsed => !collapsed)
   }
 
   return (
-    <div className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
+    <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
       <Button onClick={onToggle}>toggle</Button>
     </div>
   );
