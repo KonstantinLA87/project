@@ -1,14 +1,11 @@
 .app.light {
   --bg-color: #e7e5ee;
-
   --primary-color: #7400a1;
   --secondary-color: #4e4e4e;
-
   --navbar-bg: #d5d3e2;
-  --navbar-links-color: #000000;
+  --navbar-links-color: #000;
   --navbar-themeswitcher-bg: #efedf5;
-
-  --theme-icon__light-fill: #ffeeb2;
-  --theme-icon__light-stroke: #ac9fb8;
-  --theme-icon__dark-fill: transparent;
+  --theme-icon-light-fill: #ffeeb2;
+  --theme-icon-light-stroke: #ac9fb8;
+  --theme-icon-dark-fill: transparent;
 }

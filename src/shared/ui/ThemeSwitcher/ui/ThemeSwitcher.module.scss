@@ -6,7 +6,8 @@
   border: none;
   background: var(--navbar-themeswitcher-bg);
   display: flex;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
+
   > div {
     width: 30px;
     height: 30px;
@@ -16,15 +17,18 @@
     justify-content: center;
     margin: 0 4px;
   }
+
   &:hover {
-    box-shadow: 0px 2px 10px rgba(0,0,0,.1);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
   }
 }
 
 .icon {
   width: 24px;
-  vertical-align:bottom;
-  circle {fill: var(--theme-icon__light-fill)}
-  path {fill: var(--theme-icon__dark-fill)}
-  path, circle {stroke: var(--theme-icon__light-stroke)}
+  vertical-align: bottom;
+  circle { fill: var(--theme-icon-light-fill); }
+  path { fill: var(--theme-icon-dark-fill); }
+
+  path,
+  circle { stroke: var(--theme-icon-light-stroke); }
 }

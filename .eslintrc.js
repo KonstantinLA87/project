@@ -15,7 +15,8 @@ module.exports = {
     project: 'tsconfig.json'
   },
   plugins: [
-    'react'
+    'react',
+    'i18next'
   ],
   rules: {
     '@typescript-eslint/semi': 'off',
@@ -27,7 +28,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/no-floating-promises': 'warn',
-    '@typescript-eslint/naming-convention': 'off'
+    '@typescript-eslint/naming-convention': 'off',
+    'i18next/no-literal-string': 2
   },
   globals: {
     '__IS_DEV__': true
