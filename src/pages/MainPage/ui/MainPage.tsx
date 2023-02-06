@@ -1,6 +1,6 @@
 const MainPaige = () => {
   return (
-    <div>
+    <div className="page-wrapper">
       <h1>Main page</h1>
     </div>
   );

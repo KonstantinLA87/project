@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 import { NavBar } from 'widgets/NavBar/ui/NavBar';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
   
@@ -12,8 +12,10 @@ const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <NavBar />
-      <AppRouter />
-      <Button> Never </Button>
+      <div className="content-page">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };
