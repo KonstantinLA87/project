@@ -11,6 +11,22 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
+  // SVG
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  }
+
+  // File-loader (images)
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  }
+
   // SCSS
   const cssLoader = {
       test: /\.s[ac]ss$/i,
@@ -31,5 +47,5 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
       ],
   };
 
-  return [typescriptLoader, cssLoader];
+  return [typescriptLoader, cssLoader, svgLoader, fileLoader];
 }
