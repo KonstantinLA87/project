@@ -1,0 +1,18 @@
+.NavBar {
+  padding: 0 20px;
+  width: 100%;
+  height: var(--navbar-height);
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--navbar-bg);
+}
+
+.links {
+  a {
+    text-decoration: none;
+  }
+  a + a {
+    margin-left: 30px;
+  }
+}
