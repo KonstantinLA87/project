@@ -4,7 +4,21 @@
   border: none;
   border-color: #fff;
   box-shadow: none;
+  transition: background 0.2s;
   cursor: pointer;
+}
+
+.clear {
+  background: transparent;
+}
+
+.clear_dark {
+  color: #fff;
+  background: transparent;
+
+  &:hover {
+    background: rgb(255 255 255 / 10%);
+  }
 }
 
 .outlined {

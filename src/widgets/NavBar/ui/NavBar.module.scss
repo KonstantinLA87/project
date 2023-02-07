@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   background: var(--navbar-bg);
+  border-bottom: var(--navbar-border-line);
 }
 
 .navbar__right {
@@ -23,4 +24,8 @@
   a + a {
     margin-left: 30px;
   }
+}
+
+a.active {
+  color: red;
 }

@@ -2,10 +2,18 @@
   --bg-color: #0e0c16;
   --primary-color: #b700ff;
   --secondary-color: #a7a7a7;
+
+  // navbar
   --navbar-bg: #15131e;
   --navbar-links-color: #fff;
   --navbar-themeswitcher-bg: #2e2344;
+  --navbar-border-line: 1px solid rgb(255 255 255 / 4%);
+
+  // theme switcher
   --theme-icon-light-fill: transparent;
   --theme-icon-light-stroke: #6c4f85;
   --theme-icon-dark-fill: #ffeeb2;
+
+  // lang switcher
+  --lang-icon-stroke: #535353;
 }

@@ -3,7 +3,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
 
 export enum ThemeButton {
-  SIMPLE = 'simple',
+  CLEAR = 'clear',
+  CLEARDARK = 'clear_dark',
   OUTLINED = 'outlined',
 }
 
