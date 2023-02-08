@@ -3,5 +3,6 @@
   "navlinks": {
     "main": "Home",
     "about": "About us"
-  }
+  },
+  "not_found": "Page not found"
 }

@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 /*
 * For a detailed explanation regarding each configuration property and type check, visit:
 * https://jestjs.io/docs/configuration
@@ -6,29 +7,29 @@
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
-  
+
   // Stop running tests after `n` failures
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\Kosta\\AppData\\Local\\Temp\\jest",
-  
+
   // Automatically clear mock calls, instances and results before every test
   clearMocks: true,
   testEnvironment: 'jsdom',
   coveragePathIgnorePatterns: [
-    "\\\\node_modules\\\\"
+    '\\\\node_modules\\\\'
   ],
   moduleDirectories: [
-    "node_modules"
+    'node_modules'
   ],
   moduleFileExtensions: [
-    "js",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+    'js',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node'
   ],
   rootDir: '../../',
   testMatch: [
@@ -51,17 +52,17 @@ export default {
   
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
-    //   "json",
-    //   "text",
-    //   "lcov",
-    //   "clover"
-    // ],
+  //   "json",
+  //   "text",
+  //   "lcov",
+  //   "clover"
+  // ],
     
-    // An object that configures minimum threshold enforcement for coverage results
-    // coverageThreshold: undefined,
+  // An object that configures minimum threshold enforcement for coverage results
+  // coverageThreshold: undefined,
     
-    // A path to a custom dependency extractor
-    // dependencyExtractor: undefined,
+  // A path to a custom dependency extractor
+  // dependencyExtractor: undefined,
     
   // Make calling deprecated APIs throw helpful error messages
   // errorOnDeprecated: false,
@@ -120,7 +121,6 @@ export default {
   
   // The root directory that Jest should scan for tests and modules within
 
-  
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
   //   "<rootDir>"
@@ -142,7 +142,6 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
