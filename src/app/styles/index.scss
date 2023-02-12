@@ -3,6 +3,14 @@
 @import "themes/dark";
 @import "themes/light";
 
+body {
+  font-family: consolas, "Open Sans", serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
 .app {
   font: var(--font-m);
   background: var(--bg-color);
@@ -18,4 +26,15 @@
 .page-wrapper {
   flex: 1;
   padding: 30px;
+}
+
+nav {
+  a {
+    &.active {
+      color: var(--navbar-active-link-color);
+    }
+    &:hover {
+      color: var(--navbar-link-hover-color);
+    }
+  }
 }
