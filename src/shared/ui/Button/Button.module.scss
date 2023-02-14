@@ -1,7 +1,7 @@
 .Button {
   padding: 6px 10px;
   border-radius: 4px;
-  border: none;
+  border: 1px solid transparent;
   border-color: #fff;
   box-shadow: none;
   transition: background 0.2s;
@@ -22,6 +22,7 @@
 }
 
 .outlined {
-  border-color: rgb(0 0 0 / 10%);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
   background: transparent;
 }

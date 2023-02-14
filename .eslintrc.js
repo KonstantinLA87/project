@@ -4,21 +4,14 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript'
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: 'tsconfig.json'
   },
-  plugins: [
-    'react',
-    'i18next'
-  ],
+  plugins: ['react', 'i18next'],
   rules: {
     '@typescript-eslint/semi': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -37,4 +30,4 @@ module.exports = {
   globals: {
     '__IS_DEV__': true
   }
-}
+};
