@@ -1,23 +1,23 @@
-import cls from './NavLink.module.scss'
+import cls from './NaviLink.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 import { NavLink, NavLinkProps } from 'react-router-dom';
 
-export enum NavLinkTheme {
+export enum NaviLinkTheme {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
 }
 
-interface NavLinkProps extends NavLinkProps {
+interface NaviLinkProps extends NavLinkProps {
   className?: string
-  theme?: NavLinkTheme
+  theme?: NaviLinkTheme
 }
 
-export const NavLink: FC<NavLinkProps> = (props) => {
+export const NaviLink: FC<NaviLinkProps> = (props) => {
   const {
     to,
     className,
-    theme = NavLinkTheme.PRIMARY,
+    theme = NaviLinkTheme.PRIMARY,
     children,
     ...otherProps
   } = props;
@@ -25,10 +25,10 @@ export const NavLink: FC<NavLinkProps> = (props) => {
   return (
     <NavLink
       to={to}
-      className={classNames(cls.NavLink, {}, [className, cls[theme]])}
+      className={classNames(cls.NaviLink, {}, [className, cls[theme]])}
       {...otherProps}
     >
-        {children}
+      {children}
     </NavLink>
   );
 };

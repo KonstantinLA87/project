@@ -1,9 +1,13 @@
 import cls from './Sidebar.module.scss'
+import clsNaviLink from '../../../../shared/ui/NaviLink/NaviLink.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, useState } from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { NavLink } from 'shared/ui/NavLink/NavLink';
+import { NaviLink } from 'shared/ui/NaviLink/NaviLink';
 import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import HomeIcon from 'shared/assets/icons/nav-home.svg'
+import InfoIcon from 'shared/assets/icons/nav-info.svg'
 
 interface SidebarProps {
   className?: string
@@ -24,8 +28,21 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
     >
       <nav className={cls.links}>
-        <NavLink to={'/'}>{t('navlinks.main')}</NavLink>
-        <NavLink to={'/about'}>{t('navlinks.about')}</NavLink>
+        <NaviLink 
+          to={RoutePath.main}
+          className={classNames(collapsed ? clsNaviLink.collapsed : null)}
+        >
+          <HomeIcon />
+          {collapsed ? null : <span>{t('NaviLinks.main')}</span> }
+          
+        </NaviLink>
+        <NaviLink 
+          to={RoutePath.about}
+          className={classNames(collapsed ? clsNaviLink.collapsed : null)}
+        >
+          <InfoIcon />
+          {collapsed ? null : <span>{t('NaviLinks.about')}</span> }
+        </NaviLink>
       </nav>
       <Button 
         data-testid="button" 

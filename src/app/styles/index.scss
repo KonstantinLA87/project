@@ -32,9 +32,17 @@ nav {
   a {
     &.active {
       color: var(--navbar-active-link-color);
+
+      svg path {
+        fill: var(--navbar-active-link-color);
+      }
     }
     &:hover {
       color: var(--navbar-link-hover-color);
+
+      svg path {
+        fill: var(--navbar-active-link-color);
+      }
     }
   }
 }

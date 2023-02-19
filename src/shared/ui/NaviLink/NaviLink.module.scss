@@ -1,0 +1,51 @@
+.NaviLink {
+  color: var(--primary-color);
+  transition: 0.2s;
+  padding: 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+
+  svg {
+    margin-left: 20px;
+    transition: 0.2s;
+
+    path {
+      transition: 0.2s;
+      fill: var(--nav-icon-color);
+    }
+  }
+
+  svg + span {
+    margin-left: 10px;
+  }
+
+  span {
+    white-space: nowrap;
+    position: absolute;
+    left: 40px;
+  }
+}
+
+.primary {
+  color: var(--navbar-links-color);
+
+  &:hover {
+    color: var(--navbar-link-hover-color);
+    background: rgb(0 0 0 / 3%);
+
+    svg {
+      path {
+        fill: var(--navbar-link-hover-color);
+      }
+    }
+  }
+}
+
+.collapsed {
+  svg {
+    margin-left: 10px;
+  }
+}

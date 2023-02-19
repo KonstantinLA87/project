@@ -4,11 +4,12 @@
   background: var(--navbar-bg);
   position: relative;
   transition: width 0.3s;
-  padding: 20px;
-  
+  padding: 10px;
+
   nav {
     display: flex;
     flex-direction: column;
+
     a {
       font-size: 17px;
       text-decoration: none;
