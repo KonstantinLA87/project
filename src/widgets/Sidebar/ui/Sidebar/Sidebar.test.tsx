@@ -5,14 +5,14 @@ import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/re
 
 describe('Sidebar', () => {
   test('Test render', () => {
-    renderWithTranslation(<Sidebar />)
+    renderWithTranslation(<Sidebar />);
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
   });
 
   test('Test render', () => {
-    renderWithTranslation(<Sidebar />)
+    renderWithTranslation(<Sidebar />);
     const toggleBtn = screen.getByTestId('button');
     fireEvent.click(toggleBtn);
     expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
   });
-})
+});

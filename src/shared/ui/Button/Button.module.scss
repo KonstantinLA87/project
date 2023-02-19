@@ -2,10 +2,29 @@
   padding: 6px 10px;
   border-radius: 4px;
   border: 1px solid transparent;
-  border-color: #fff;
   box-shadow: none;
   transition: background 0.2s;
   cursor: pointer;
+
+  &.size_s {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  &.size_m {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+
+  &.size_l {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+
+  &.size_xl {
+    padding: 10px 14px;
+    font-size: 20px;
+  }
 }
 
 .clear {

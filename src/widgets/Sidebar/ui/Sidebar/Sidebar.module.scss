@@ -4,8 +4,31 @@
   background: var(--navbar-bg);
   position: relative;
   transition: width 0.3s;
+  padding: 20px;
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 17px;
+      text-decoration: none;
+    }
+  }
 }
 
 .collapsed {
   width: var(--sidebar-width-collapsed);
+}
+
+.collapseBtn {
+  padding: 0 !important;
+  position: absolute;
+  right: -30px;
+  bottom: 40px;
+  background: var(--navbar-bg);
+  width: 30px;
+  height: 60px;
+  border-radius: 0 4px 4px 0 !important;
+  font-size: 22px;
+  color: var(--primary-color);
 }

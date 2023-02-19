@@ -1,23 +1,23 @@
-import cls from './AppLink.module.scss'
+import cls from './NavLink.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 import { NavLink, NavLinkProps } from 'react-router-dom';
 
-export enum AppLinkTheme {
+export enum NavLinkTheme {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
 }
 
-interface AppLinkProps extends NavLinkProps {
+interface NavLinkProps extends NavLinkProps {
   className?: string
-  theme?: AppLinkTheme
+  theme?: NavLinkTheme
 }
 
-export const AppLink: FC<AppLinkProps> = (props) => {
+export const NavLink: FC<NavLinkProps> = (props) => {
   const {
     to,
     className,
-    theme = AppLinkTheme.PRIMARY,
+    theme = NavLinkTheme.PRIMARY,
     children,
     ...otherProps
   } = props;
@@ -25,7 +25,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
   return (
     <NavLink
       to={to}
-      className={classNames(cls.AppLink, {}, [className, cls[theme]])}
+      className={classNames(cls.NavLink, {}, [className, cls[theme]])}
       {...otherProps}
     >
         {children}

@@ -2,7 +2,6 @@ import cls from './LangSwitcher.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import LangIcon from 'shared/assets/icons/lang.svg'
 
 interface LangSwitcherProps {
