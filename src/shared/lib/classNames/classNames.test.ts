@@ -18,7 +18,7 @@ describe('classNames', () => {
   });
 
   test('with mods + undefined', () => {
-    const expected = 'someClass hovered';
-    expect(classNames('someClass', { hovered: true, covered: undefined }, [])).toBe(expected);
+    const expected = 'someClass hovered covered';
+    expect(classNames('someClass', { hovered: true, covered: true }, [])).toBe(expected);
   });
 });

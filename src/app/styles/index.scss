@@ -5,16 +5,17 @@
 
 body {
   font-family: consolas, "Open Sans", serif;
+  color: var(--primary-color);
 }
 
 h1 {
   margin-bottom: 30px;
+  color: var(--primary-color);
+  // font: var(--font-m);
 }
 
 .app {
-  font: var(--font-m);
   background: var(--bg-color);
-  color: var(--primary-color);
   min-height: 100vh;
 }
 

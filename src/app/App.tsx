@@ -3,8 +3,7 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 import { NavBar } from 'widgets/NavBar/ui/NavBar';
 import { Sidebar } from 'widgets/Sidebar';
-import { FC, Suspense } from 'react';
-import './styles/index.scss';
+import { FC, Suspense, useState } from 'react';
 
 const App: FC = () => {
   const { theme } = useTheme();

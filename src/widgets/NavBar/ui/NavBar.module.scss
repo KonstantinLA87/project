@@ -13,16 +13,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
 
-.links {
-  a {
-    text-decoration: none;
+  button {
     font-size: 17px;
-  }
-
-  a + a {
-    margin-left: 30px;
+    color: var(--inverted-color);
+    margin-left: 20px;
   }
 }
 

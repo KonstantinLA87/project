@@ -11,7 +11,7 @@ module.exports = {
     sourceType: 'module',
     project: 'tsconfig.json',
   },
-  plugins: ['react', 'i18next'],
+  plugins: ['react', 'i18next', 'react-hooks'],
   rules: {
     '@typescript-eslint/semi': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -26,6 +26,8 @@ module.exports = {
     'i18next/no-literal-string': 2,
     'no-trailing-spaces': 'off',
     'i18next/no-literal-string': 'off',
+    'react-hooks/rules-of-hooks": "error',
+    'react-hooks/exhaustive-deps": "error',
   },
   globals: {
     __IS_DEV__: true,
