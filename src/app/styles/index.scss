@@ -31,19 +31,20 @@ h1 {
 
 nav {
   a {
-    &.active {
-      color: var(--navbar-active-link-color);
 
-      svg path {
-        fill: var(--navbar-active-link-color);
+    &.active {
+      color: var(--nav-icon-active-color);
+      
+      svg {
+        path,
+        circle {
+          stroke: var(--nav-icon-active-color);
+        }
       }
     }
+    
     &:hover {
-      color: var(--navbar-link-hover-color);
-
-      svg path {
-        fill: var(--navbar-active-link-color);
-      }
+      color: var(--primary-color);
     }
   }
 }

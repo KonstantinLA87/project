@@ -1,5 +1,5 @@
 .NaviLink {
-  color: var(--primary-color);
+  color: var(--nav-icon-color);
   transition: 0.2s;
   padding: 0;
   border-radius: 6px;
@@ -11,15 +11,15 @@
   svg {
     margin-left: 20px;
     transition: 0.2s;
+    width: 24px;
 
-    path {
+    path,
+    circle {
       transition: 0.2s;
-      fill: var(--nav-icon-color);
+      fill: none;
+      stroke: var(--nav-icon-color);
+      stroke-width: 1.5px;
     }
-  }
-
-  svg + span {
-    margin-left: 10px;
   }
 
   span {
@@ -27,6 +27,11 @@
     position: absolute;
     left: 40px;
   }
+
+  svg + span {
+    margin-left: 20px;
+  }
+
 }
 
 .primary {
@@ -38,7 +43,6 @@
 
     svg {
       path {
-        fill: var(--navbar-link-hover-color);
       }
     }
   }
