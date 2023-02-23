@@ -32,12 +32,23 @@ nav {
   a {
 
     &.active {
-      color: var(--nav-icon-active-color);
+      color: var(--secondary-color);
 
       svg {
         path,
         circle {
-          stroke: var(--nav-icon-active-color);
+          stroke: var(--secondary-color);
+        }
+      }
+
+      &:hover {
+        color: var(--secondary-color);
+
+        svg {
+          path,
+          circle {
+            stroke: var(--secondary-color);
+          }
         }
       }
     }

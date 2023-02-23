@@ -1,0 +1,15 @@
+.Input {
+  height: 50px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  padding: 0 10px;
+  outline: none;
+  font-size: 17px;
+}
+
+label {
+  color: var(--inverted-color);
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 13px;
+}

@@ -4,7 +4,7 @@
   margin-left: 20px;
   border-radius: 60px;
   border: none;
-  background: var(--navbar-themeswitcher-bg);
+  background: var(--secondary-dark-color);
   display: flex;
   transition: box-shadow 0.3s;
 
@@ -26,9 +26,9 @@
 .icon {
   width: 24px;
   vertical-align: bottom;
-  circle { fill: var(--theme-icon-light-fill); }
-  path { fill: var(--theme-icon-dark-fill); }
+  circle { fill: transparent; }
+  path { fill: var(--primary-color); }
 
   path,
-  circle { stroke: var(--theme-icon-light-stroke); }
+  circle { stroke: var(--primary-color); }
 }

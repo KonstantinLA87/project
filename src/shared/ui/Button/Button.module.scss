@@ -1,5 +1,5 @@
 .Button {
-  padding: 6px 10px;
+  padding: 6px 10px 7px;
   border-radius: 4px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -7,24 +7,29 @@
   cursor: pointer;
 
   &.size_s {
-    padding: 4px 8px;
+    padding: 4px 8px 5px;
     font-size: 14px;
   }
 
   &.size_m {
-    padding: 6px 10px;
+    padding: 6px 10px 7px;
     font-size: 16px;
   }
 
   &.size_l {
-    padding: 8px 12px;
+    padding: 8px 12px 9px;
     font-size: 18px;
   }
 
   &.size_xl {
-    padding: 10px 14px;
+    padding: 12px 30px 13px;
     font-size: 20px;
   }
+}
+
+.primary {
+  background: var(--primary-color);
+  color: var(--bg-color);
 }
 
 .clear {
