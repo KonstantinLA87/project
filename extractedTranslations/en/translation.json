@@ -1,5 +1,6 @@
 {
   "Login": "",
+  "Logout": "",
   "NaviLinks": {
     "about": "",
     "main": ""
@@ -8,10 +9,12 @@
   "Reload page": "",
   "Sign In": "",
   "login": "",
+  "login error": "",
   "navlinks": {
     "about": "",
     "main": ""
   },
   "not_found": "",
-  "pageError": ""
+  "pageError": "",
+  "Вы ввели неверный логин или пароль": ""
 }

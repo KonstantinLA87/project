@@ -10,5 +10,8 @@
   "Sign In": "Sign In",
   "login": "Login",
   "Password": "Password",
-  "Login": "Login"
+  "Login": "Login",
+  "Sign out": "Sign out",
+  "Logout": "Logout",
+  "login error": "Login or Password is incorrect"
 }

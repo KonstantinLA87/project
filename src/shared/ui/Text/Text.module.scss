@@ -1,0 +1,18 @@
+.title {
+  font: var(--font-l);
+}
+
+.text {
+  font: val(--font-m);
+  opacity: 0.8;
+}
+
+.primary {
+  color: var(--inverted-color);
+}
+
+.error {
+  background: red;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}

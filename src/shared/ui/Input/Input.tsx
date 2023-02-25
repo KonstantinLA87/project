@@ -1,8 +1,6 @@
-import cls from './Input.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, InputHTMLAttributes } from 'react';
-
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+import cls from './Input.module.scss'
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
@@ -35,7 +33,7 @@ export const Input: FC<InputProps> = (props) => {
       <input 
         className={classNames(cls.Input, {}, [className])} 
         value={value} 
-        onChange={() => onChange(value)} 
+        onChange={onChangeHandler} 
         placeholder={placeholder}
         {...otherProps}
       />

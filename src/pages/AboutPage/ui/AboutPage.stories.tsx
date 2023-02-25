@@ -3,7 +3,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import AboutPage from './AboutPage';
 
-
 export default {
   title: 'pages/AboutPage',
   component: AboutPage,
