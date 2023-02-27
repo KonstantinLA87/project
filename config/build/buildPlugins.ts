@@ -20,9 +20,10 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
     }),
   ]
   
+  plugins.push(new BundleAnalyzerPlugin())
+
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin())
-    plugins.push(new BundleAnalyzerPlugin())
   }
 
   return plugins;
