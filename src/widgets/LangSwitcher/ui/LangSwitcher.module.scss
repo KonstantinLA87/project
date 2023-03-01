@@ -23,7 +23,7 @@
   background: transparent;
 
   &:hover {
-    background: rgb(0 0 0 / 5%);
+    background: var(--navbar-item-hover-color);
 
     .lang_icon {
       opacity: 1;

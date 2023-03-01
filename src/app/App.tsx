@@ -6,6 +6,7 @@ import { Sidebar } from 'widgets/Sidebar';
 import { FC, Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
+import { useNavigate } from 'react-router';
 
 const App: FC = () => {
   const { theme } = useTheme();
