@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const NotFoundPage: FC = () => {
+const NotFoundPage: FC = memo(() => {
   const { t } = useTranslation();
 
   return (
@@ -9,6 +9,6 @@ const NotFoundPage: FC = () => {
       <h1>{t('not_found')}</h1>
     </div>
   );
-};
+});
 
 export default NotFoundPage;

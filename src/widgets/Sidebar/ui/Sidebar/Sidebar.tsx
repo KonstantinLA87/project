@@ -1,26 +1,30 @@
 import cls from './Sidebar.module.scss'
-import clsNaviLink from '../../../../shared/ui/NaviLink/NaviLink.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC, useState } from 'react';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { NaviLink } from 'shared/ui/NaviLink/NaviLink';
-import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import HomeIcon from 'shared/assets/icons/nav-home.svg'
-import InfoIcon from 'shared/assets/icons/nav-info.svg'
+import { FC, memo, useMemo, useState } from 'react';
+import { Button } from 'shared/ui/Button/Button';
+import { SidebarItemsList } from '../../model/items';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 interface SidebarProps {
   className?: string
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
-  const { t } = useTranslation();
-
+export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const onToggle = (): void => {
     setCollapsed(collapsed => !collapsed)
   }
+
+  const itemsList = useMemo(() => {
+    return SidebarItemsList.map( item => ( 
+      <SidebarItem 
+        item={item} 
+        collapsed={collapsed}
+        key={item.path}
+      />
+    ))
+  }, [collapsed]);
 
   return (
     <div 
@@ -28,30 +32,15 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
     >
       <nav className={cls.links}>
-        <NaviLink 
-          to={RoutePath.main}
-          className={classNames(collapsed ? clsNaviLink.collapsed : null)}
-        >
-          <HomeIcon />
-          {collapsed ? null : <span>{t('NaviLinks.main')}</span> }
-          
-        </NaviLink>
-        <NaviLink 
-          to={RoutePath.about}
-          className={classNames(collapsed ? clsNaviLink.collapsed : null)}
-        >
-          <InfoIcon />
-          {collapsed ? null : <span>{t('NaviLinks.about')}</span> }
-        </NaviLink>
+        {itemsList}
       </nav>
       <Button 
         data-testid="button" 
         onClick={onToggle}
         className={cls.collapseBtn}
-
       >
         {collapsed ? '>' : '<'}
       </Button>
     </div>
   );
-};
+});

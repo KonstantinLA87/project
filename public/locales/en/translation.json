@@ -2,7 +2,8 @@
   "translate": "Translate",
   "NaviLinks": {
     "main": "Home",
-    "about": "About us"
+    "about": "About us",
+    "profile": "Profile"
   },
   "not_found": "Page not found",
   "pageError": "Something Goes Wrong",

@@ -17,7 +17,7 @@
     circle {
       transition: 0.2s;
       fill: none;
-      stroke: var(--nav-icon-color);
+      stroke: var(--navbar-links-color);
       stroke-width: 1.5px;
     }
   }
@@ -31,25 +31,24 @@
   svg + span {
     margin-left: 20px;
   }
+}
 
+.collapsed {
+  svg {
+    margin-left: 10px;
+  }
 }
 
 .primary {
   color: var(--navbar-links-color);
 
   &:hover {
-    color: var(--navbar-link-hover-color);
-    background: rgb(0 0 0 / 3%);
+    color: var(--navbar-links-hover-color);
+    background: var(--navbar-item-hover-color);
 
-    svg {
-      path {
-      }
+    svg path,
+    svg circle {
+      stroke: var(--navbar-links-hover-color);
     }
-  }
-}
-
-.collapsed {
-  svg {
-    margin-left: 10px;
   }
 }

@@ -1,10 +1,10 @@
 import { Counter } from 'entities/Counter';
-import { FC, useState } from 'react';
+import { FC, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
 import { Text, TextStyle } from 'shared/ui/Text/Text';
 
-const MainPaige: FC = () => {
+const MainPaige: FC = memo(() => {
   const { t } = useTranslation('main');
 
   const [inputState, setInputState] = useState('');
@@ -27,6 +27,6 @@ const MainPaige: FC = () => {
       />
     </div>
   );
-};
+});
 
 export default MainPaige;

@@ -1,6 +1,6 @@
 import cls from './NaviLink.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { NavLink, NavLinkProps } from 'react-router-dom';
 
 export enum NaviLinkTheme {
@@ -13,7 +13,7 @@ interface NaviLinkProps extends NavLinkProps {
   theme?: NaviLinkTheme
 }
 
-export const NaviLink: FC<NaviLinkProps> = (props) => {
+export const NaviLink: FC<NaviLinkProps> = memo((props) => {
   const {
     to,
     className,
@@ -31,4 +31,4 @@ export const NaviLink: FC<NaviLinkProps> = (props) => {
       {children}
     </NavLink>
   );
-};
+});

@@ -1,8 +1,8 @@
 import { Counter } from 'entities/Counter';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const AboutPage: FC = () => {
+const AboutPage: FC = memo(() => {
   const { t } = useTranslation('about');
 
   return (
@@ -11,6 +11,6 @@ const AboutPage: FC = () => {
       <Counter />
     </div>
   );
-};
+});
 
 export default AboutPage;

@@ -1,12 +1,12 @@
 import './Loader.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 interface LoaderProps {
   className?: string
 }
 
-export const Loader: FC<LoaderProps> = ({ className }) => {
+export const Loader: FC<LoaderProps> = memo(({ className }) => {
   return (
     <div className={classNames('lds-roller', {}, [className])}>
       <div></div>
@@ -19,4 +19,4 @@ export const Loader: FC<LoaderProps> = ({ className }) => {
       <div></div>
     </div>
   );
-};
+});

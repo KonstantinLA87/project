@@ -1,6 +1,5 @@
 .app_light_theme {
   --bg-color: #e7e5ee;
-  // --primary-color: #7400a1;
   --primary-color: #461c68;
   --secondary-color: #491ba3;
   --secondary-dark-color: #472788;
@@ -8,9 +7,9 @@
 
   // navbar
   --navbar-bg: #d5d3e2;
-  --navbar-links-color: #000;
-  --navbar-active-link-color: #7400a1;
-  --navbar-link-hover-color: #a600e7;
+  --navbar-links-color: rgb(255 255 255 / 70%);
+  --navbar-links-hover-color: rgb(255 255 255 / 100%);
+  --navbar-item-hover-color: rgb(0 0 0 / 3%);
   --navbar-themeswitcher-bg: #efedf5;
   --navbar-border-line: 1px solid rgb(0 0 0 / 4%);
 

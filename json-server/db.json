@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Константин",
+    "lastname": "Лабзов",
+    "age": 35,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint Petersburg",
+    "username": "admin",
+    "avatar": "https://thumbs.dreamstime.com/b/funny-cartoon-monster-face-vector-halloween-monster-square-avatar-funny-cartoon-monster-face-vector-monster-square-avatar-175917146.jpg"
+  }
 }

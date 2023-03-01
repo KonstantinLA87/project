@@ -1,6 +1,6 @@
 import cls from './Text.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export enum TextStyle {
@@ -15,7 +15,7 @@ interface TextProps {
   style?: TextStyle;
 }
 
-export const Text: FC<TextProps> = ({className, title, text, style = TextStyle.PRIMARY}) => {
+export const Text: FC<TextProps> = memo(({className, title, text, style = TextStyle.PRIMARY}) => {
   const {t} = useTranslation();
   return (
     <div 
@@ -25,4 +25,4 @@ export const Text: FC<TextProps> = ({className, title, text, style = TextStyle.P
       {text && <p className={cls.text}>{text}</p>}
     </div>
   );
-};
+});
