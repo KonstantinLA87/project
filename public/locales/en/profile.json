@@ -1,3 +1,7 @@
 {
-  "title": "Profile"
+  "title": "Account",
+  "edit": "Edit",
+  "name": "Name",
+  "lastname": "Lastname",
+  "profile": "Profile"
 }

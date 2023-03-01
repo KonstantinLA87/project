@@ -24,7 +24,8 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
   }, []);
 
   const onLogout = useCallback(() => {
-    dispatch(userActions.logout())
+    // CHECK
+    dispatch(userActions.logout)
   }, []);
 
   const onCloseModal = useCallback(() => {

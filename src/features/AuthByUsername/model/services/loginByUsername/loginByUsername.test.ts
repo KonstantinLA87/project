@@ -17,12 +17,13 @@ describe('loginByUsername', () => {
     getState = jest.fn();
   });
 
-  test('', async () => {
-    // mockedAxios.post.mockReturnValue(Promise.resolve({data: {username: '123', id: '1'}}));
-    mockedAxios.post.mockResolvedValue({data: {username: '123', id: '1'}});
-    const action = loginByUsername({ username: '123', password: '123' });
-    const result = action(dispatch, getState, undefined);
-    console.log(result);
-    // expect().toEqual();
-  });
+  // test('', async () => {
+  //   // mockedAxios.post.mockReturnValue(Promise.resolve({data: {username: '123', id: '1'}}));
+  //   mockedAxios.post.mockResolvedValue({data: {username: '123', id: '1'}});
+  //   const action = loginByUsername({ username: '123', password: '123' });
+  //   // CHECK
+  //   const result = action(dispatch, getState, undefined);
+  //   console.log(result);
+  //   // expect().toEqual();
+  // });
 });

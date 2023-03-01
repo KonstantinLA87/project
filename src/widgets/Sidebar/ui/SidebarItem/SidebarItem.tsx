@@ -7,7 +7,7 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { SidebarItemsList, SidebarItemType } from '../../model/items';
 
 interface SidebarItemProps {
-  item?: SidebarItemType;
+  item: SidebarItemType;
   collapsed: boolean;
 }
 
@@ -16,7 +16,7 @@ export const SidebarItem: FC<SidebarItemProps> = memo(({ item, collapsed }) => {
   return (
     <NaviLink 
       to={item.path}
-      className={classNames(collapsed ? cls.collapsed : null)}
+      className={classNames(collapsed ? cls.collapsed : '')}
     >
       <item.Icon />
       {collapsed ? null : <span>{t(item.text)}</span> }
