@@ -17,7 +17,7 @@ export const NaviLink: FC<NaviLinkProps> = memo((props) => {
   const {
     to,
     className,
-    theme = NaviLinkTheme.PRIMARY,
+    theme = '',
     children,
     ...otherProps
   } = props;

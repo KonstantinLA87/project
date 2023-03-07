@@ -1,5 +1,5 @@
 .NaviLink {
-  color: var(--nav-icon-color);
+  color: var(--inverted-color);
   transition: 0.2s;
   padding: 0;
   border-radius: 6px;
@@ -7,6 +7,16 @@
   align-items: center;
   height: 60px;
   position: relative;
+
+  &:hover {
+    color: var(--navbar-links-hover);
+    background: var(--navbar-links-bg-hover);
+
+    svg path,
+    svg circle {
+      stroke: var(--navbar-links-hover);
+    }
+  }
 
   svg {
     margin-left: 20px;
@@ -17,7 +27,7 @@
     circle {
       transition: 0.2s;
       fill: none;
-      stroke: var(--navbar-links-color);
+      stroke: var(--inverted-color);
       stroke-width: 1.5px;
     }
   }
@@ -36,19 +46,5 @@
 .collapsed {
   svg {
     margin-left: 10px;
-  }
-}
-
-.primary {
-  color: var(--navbar-links-color);
-
-  &:hover {
-    color: var(--navbar-links-hover-color);
-    background: var(--navbar-item-hover-color);
-
-    svg path,
-    svg circle {
-      stroke: var(--navbar-links-hover-color);
-    }
   }
 }

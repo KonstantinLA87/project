@@ -1,0 +1,29 @@
+.Avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  img {
+    position: absolute;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.small {
+  width: 80px;
+  height: 80px;
+}
+
+.medium {
+  width: 140px;
+  height: 140px;
+}
+
+.large {
+  width: 200px;
+  height: 200px;
+}

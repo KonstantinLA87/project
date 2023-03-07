@@ -1,7 +1,14 @@
 {
-  "title": "Account",
+  "title": "Profile",
   "edit": "Edit",
   "name": "Name",
   "lastname": "Lastname",
-  "profile": "Profile"
+  "profile error body": "Try to reload page",
+  "profile error title": "The error was corrupted",
+  "cancel": "Cancel",
+  "save": "Save",
+  "your age": "Your age",
+  "Your city": "Your city",
+  "Username": "Username",
+  "avatar": "Input avatar link"
 }

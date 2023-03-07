@@ -1,15 +1,17 @@
-.Input {
-  height: 50px;
-  border: 1px solid rgb(0 0 0 / 10%);
-  padding: 0 10px;
-  outline: none;
-  font-size: 17px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-label {
+// .readonly {
+//   background: transparent;
+//   color: var(--inverted-color);
+//   padding-left: 0;
+// }
+
+.readonly {
+  cursor: auto;
+  background: var(--navbar-links-bg-hover);
   color: var(--inverted-color);
-  display: block;
-  width: 100%;
-  margin-bottom: 5px;
-  font-size: 13px;
 }

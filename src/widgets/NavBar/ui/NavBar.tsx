@@ -1,6 +1,6 @@
 import cls from './NavBar.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC, memo, useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
 import { useTranslation } from 'react-i18next';
@@ -13,7 +13,7 @@ interface NavBarProps {
   className?: string
 }
 
-export const NavBar: FC<NavBarProps> = memo(({ className }) => {
+export const NavBar = memo(({ className }: NavBarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
@@ -23,14 +23,13 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
     setIsAuthModal(true);
   }, []);
 
-  const onLogout = useCallback(() => {
-    // CHECK
-    dispatch(userActions.logout)
-  }, []);
-
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
   }, []);
+  
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout());
+  }, [dispatch]);
 
   if(authData) {
     return (
@@ -38,7 +37,13 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
         <div className={cls.navbar__right}>
           <LangSwitcher />
           <ThemeSwitcher />
-          <Button theme={ButtonTheme.CLEAR} onClick={onLogout}>{t('Logout')}</Button>
+          <Button 
+            className={classNames(cls.signin)}
+            theme={ButtonTheme.NAVBAR} 
+            onClick={onLogout}
+          >
+            {t('Logout')}
+          </Button>
         </div>
       </div>
     )
@@ -50,7 +55,13 @@ export const NavBar: FC<NavBarProps> = memo(({ className }) => {
       <div className={cls.navbar__right}>
         <LangSwitcher />
         <ThemeSwitcher />
-        <Button theme={ButtonTheme.CLEAR} onClick={onOpenModal}>{t('Sign In')}</Button>
+        <Button 
+          className={classNames(cls.signin)}
+          theme={ButtonTheme.NAVBAR} 
+          onClick={onOpenModal}
+        >
+          {t('Sign In')}
+        </Button>
       </div>
     </div>
   );

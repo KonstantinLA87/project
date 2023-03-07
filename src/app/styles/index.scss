@@ -10,7 +10,7 @@ body {
 
 h1 {
   margin-bottom: 30px;
-  color: var(--primary-color);
+  color: var(--inverted-color);
 }
 
 .app {
@@ -30,7 +30,6 @@ h1 {
 
 nav {
   a {
-
     &.active {
       color: var(--secondary-color);
 
@@ -52,9 +51,24 @@ nav {
         }
       }
     }
-
-    &:hover {
-      color: var(--primary-color);
-    }
   }
+}
+
+label {
+  color: var(--inverted-color);
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+input,
+select {
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  padding: 0 20px 0 10px;
+  outline: none;
+  font-size: 17px;
 }

@@ -2,35 +2,15 @@
   width: 22px;
   vertical-align: bottom;
   position: relative;
-  top: -2px;
-  opacity: 0.7;
   transition: opacity 0.1s;
 
   path {
     transition: stroke 0.2s;
-    stroke-width: 1.5;
-    stroke: var(--inverted-color);
+    stroke-width: 2;
   }
 }
 
 .lang_btn {
-  cursor: pointer;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  transition: 0.2s;
-  background: transparent;
-
-  &:hover {
-    background: var(--navbar-item-hover-color);
-
-    .lang_icon {
-      opacity: 1;
-
-      path {
-        stroke: var(--primary-color);
-      }
-    }
-  }
+  width: 43px;
+  height: 43px;
 }

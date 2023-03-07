@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { NaviLink } from 'shared/ui/NaviLink/NaviLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { SidebarItemsList, SidebarItemType } from '../../model/items';
+import { getUserAuthData } from '../../../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
+import { useSelector } from 'react-redux';
 
 interface SidebarItemProps {
   item: SidebarItemType;
@@ -13,6 +15,12 @@ interface SidebarItemProps {
 
 export const SidebarItem: FC<SidebarItemProps> = memo(({ item, collapsed }) => {
   const {t} = useTranslation();
+  const isAuth = useSelector(getUserAuthData);
+
+  if(item.authOnly && !isAuth) {
+    return null;
+  }
+
   return (
     <NaviLink 
       to={item.path}

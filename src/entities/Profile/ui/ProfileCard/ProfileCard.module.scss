@@ -1,13 +1,7 @@
 .ProfileCard {
-  padding: 30px 30px 40px;
-  // border: 2px solid var(--inverted-color);
-  border-radius: 4px;
-  background: var(--navbar-bg);
-}
-
-.header {
-  display: flex;
-  justify-content: flex-start;
+  padding: 25px 30px 35px;
+  border-radius: 8px;
+  background: var(--plate-bg);
 }
 
 .editBtn {
@@ -15,12 +9,30 @@
 }
 
 .data {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.input {
-  margin-top: 10px;
+.input,
+select {
+  margin-bottom: 25px;
+  width: 300px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.column {
+  margin-right: 30px;
 }

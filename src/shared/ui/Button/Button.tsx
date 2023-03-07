@@ -7,6 +7,8 @@ export enum ButtonTheme {
   CLEAR = 'clear',
   CLEARDARK = 'clear_dark',
   OUTLINED = 'outlined',
+  OUTLINED_RED = 'outlined_red',
+  NAVBAR = 'navbar',
 }
 
 export enum ButtonSize {
@@ -28,8 +30,8 @@ export const Button: FC<ButtonProps> = memo((props) => {
   const { 
     children, 
     className, 
-    theme = ButtonTheme.PRIMARY, 
-    size = ButtonSize.M,
+    theme = '', 
+    size = '',
     disabled,
     ...otherProps
   } = props;

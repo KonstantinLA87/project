@@ -1,25 +1,36 @@
 .app_dark_theme {
-  --bg-color: #0e0c16;
+  --bg-color: rgb(14, 12, 22);
   --primary-color: #d0ff00;
+  --primary-color-30: rgb(208 255 0 / 30%);
+  --primary-color-70: rgb(208 255 0 / 70%);
   --secondary-color: #9f6fff;
-  --secondary-dark-color: #472788;
-  --inverted-color: #d5d3e2;
+  --active-color: #472788;
+  --inverted-color: rgb(230 224 255 / 90%);
+  --red-color: red;
+  --red-color-10: rgb(255 0 0 / 10%);
+  --red-color-30: rgb(255 0 0 / 30%);
+  --red-color-70: rgb(255 0 0 / 70%);
 
   // navbar
   --navbar-bg: #15131e;
-  --navbar-links-color: rgb(230 224 255 / 90%);
-  --navbar-links-hover-color: rgb(255 255 255 / 100%);
-  --navbar-item-hover-color: rgb(0 0 0 / 25%);
+  --navbar-links-hover: rgb(255 255 255 / 100%);
+  --navbar-links-bg-hover: rgb(0 0 0 / 25%);
   --navbar-themeswitcher-bg: #472788;
   --navbar-border-line: 1px solid rgb(255 255 255 / 4%);
 
+  // navbar icons
   --nav-icon-color: #64587c;
   --nav-icon-active-color: #d7c3ff;
 
+  --plate-bg: #201d2f;
+
+  // modal
+  --overlay-color: rgb(12 7 21 / 70%);
+  --modal-bg: #472788;
+
   // theme switcher
-  --theme-icon-light-fill: transparent;
-  --theme-icon-light-stroke: #6c4f85;
-  --theme-icon-dark-fill: #ffeeb2;
+  --theme-bg: #472788;
+  --theme-bg-hover: #4e2999;
 
   // lang switcher
   --lang-icon-stroke: #535353;

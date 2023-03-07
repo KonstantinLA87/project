@@ -13,10 +13,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
 
-  button {
-    font-size: 17px;
-    color: var(--inverted-color);
-    margin-left: 20px;
-  }
+.signin {
+  margin-left: 20px;
+  padding: 10px 16px 11px !important;
 }

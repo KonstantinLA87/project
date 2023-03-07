@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import LangIcon from 'shared/assets/icons/lang.svg'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface LangSwitcherProps {
   className?: string
@@ -17,12 +18,13 @@ export const LangSwitcher: FC<LangSwitcherProps> = memo(({ className }) => {
 
   return (
     <>
-      <button
+      <Button
         className={cls.lang_btn}
+        theme={ButtonTheme.NAVBAR}
         onClick={toggleLang}
       >
         <LangIcon className={cls.lang_icon} />
-      </button>
+      </Button>
     </>
   )
 });

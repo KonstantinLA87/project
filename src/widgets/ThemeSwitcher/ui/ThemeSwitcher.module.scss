@@ -4,9 +4,9 @@
   margin-left: 20px;
   border-radius: 60px;
   border: none;
-  background: var(--secondary-dark-color);
+  background: var(--theme-bg);
   display: flex;
-  transition: box-shadow 0.3s;
+  // transition: 0.2s;
 
   > div {
     width: 30px;
@@ -19,16 +19,25 @@
   }
 
   &:hover {
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+    background: var(--theme-bg-hover);
+  }
+
+  &.dark {
+    .icon {
+      path { fill: var(--primary-color); }
+    }
+  }
+  &.light {
+    .icon {
+      circle { fill: var(--yellow); }
+    }
   }
 }
 
 .icon {
   width: 24px;
   vertical-align: bottom;
-  circle { fill: transparent; }
-  path { fill: var(--primary-color); }
-
+  path, circle { fill: transparent; }
   path,
   circle { stroke: var(--primary-color); }
 }
