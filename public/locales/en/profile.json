@@ -10,5 +10,10 @@
   "your age": "Your age",
   "Your city": "Your city",
   "Username": "Username",
-  "avatar": "Input avatar link"
+  "avatar": "Input avatar link",
+  "Wrong age value": "Wrong age value",
+  "Wrong country value": "Wrong country value",
+  "Wrong data value": "Wrong data",
+  "Incorrect user data": "Incorrect user data",
+  "incorrect server data": "Incorrect server data"
 }

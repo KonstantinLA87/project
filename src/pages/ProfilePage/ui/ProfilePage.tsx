@@ -10,6 +10,10 @@ import { getProfileReadonly } from '../../../entities/Profile';
 import { classNames } from '../../../shared/lib/classNames/classNames';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { getProfileValidateErrors } from '../../../entities/Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+import { Text, TextStyle } from 'shared/ui/Text/Text';
+import { ValidateProfileError } from '../../../entities/Profile/model/types/profile';
+import cls from './ProfilePage.module.scss';
 
 const reducers: ReducersList = {
   profile: ProfileReducer,
@@ -26,6 +30,15 @@ const ProfilePage: FC<ProfilePageProps> = memo(({ className }) => {
   const isLoading = useSelector(getProfileIsLoading);
   const error = useSelector(getProfileError);
   const readOnly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
+
+  const validateErrorTranslates = {
+    [ValidateProfileError.INCORRECT_AGE]: t('Wrong age value'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Wrong country value'),
+    [ValidateProfileError.NO_DATA]: t('Wrong data value'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('Incorrect user data'),
+    [ValidateProfileError.SERVER_ERROR]: t('incorrect server data'),
+  }
 
   useEffect(() => {
     dispatch(fetchProfileData());
@@ -68,6 +81,15 @@ const ProfilePage: FC<ProfilePageProps> = memo(({ className }) => {
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames('', {}, [className])}>
         <ProfilePageHeader />
+        <div className={cls.validateErrorsWrapper}>
+          {validateErrors?.length && validateErrors.map(err => (
+            <Text 
+              key={err}
+              style={TextStyle.ERROR} 
+              text={validateErrorTranslates[err]} 
+            />
+          ))}
+        </div>
         <ProfileCard 
           data={formData} 
           isLoading={isLoading}
