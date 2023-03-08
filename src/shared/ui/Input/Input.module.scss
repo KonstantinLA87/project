@@ -3,15 +3,3 @@
   flex-direction: column;
   width: 100%;
 }
-
-// .readonly {
-//   background: transparent;
-//   color: var(--inverted-color);
-//   padding-left: 0;
-// }
-
-.readonly {
-  cursor: auto;
-  background: var(--navbar-links-bg-hover);
-  color: var(--inverted-color);
-}

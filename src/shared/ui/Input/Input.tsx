@@ -37,7 +37,7 @@ export const Input: FC<InputProps> = memo((props) => {
         value={value} 
         onChange={onChangeHandler} 
         placeholder={placeholder}
-        readOnly={readOnly}
+        disabled={readOnly}
         {...otherProps}
       />
     </div>

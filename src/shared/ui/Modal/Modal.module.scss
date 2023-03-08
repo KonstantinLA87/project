@@ -25,6 +25,12 @@
   transition: transform 0.2s, opacity 0.2s;
   opacity: 0;
   transform: translateY(30px);
+  border-radius: 6px;
+
+  h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
 }
 
 .opened {

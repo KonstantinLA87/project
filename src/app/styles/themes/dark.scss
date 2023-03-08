@@ -6,10 +6,11 @@
   --secondary-color: #9f6fff;
   --active-color: #472788;
   --inverted-color: rgb(230 224 255 / 90%);
-  --red-color: red;
-  --red-color-10: rgb(255 0 0 / 10%);
-  --red-color-30: rgb(255 0 0 / 30%);
-  --red-color-70: rgb(255 0 0 / 70%);
+  --inverted-color: #fff;
+  --red-color: #ff4400;
+  --red-color-10: rgb(255 68 0 / 10%);
+  --red-color-30: rgb(255 68 0 / 30%);
+  --red-color-70: rgb(255 68 0 / 70%);
 
   // navbar
   --navbar-bg: #15131e;
@@ -26,7 +27,7 @@
 
   // modal
   --overlay-color: rgb(12 7 21 / 70%);
-  --modal-bg: #472788;
+  --modal-bg: #232033;
 
   // theme switcher
   --theme-bg: #472788;

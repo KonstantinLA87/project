@@ -25,11 +25,17 @@
   &.dark {
     .icon {
       path { fill: var(--primary-color); }
+
+      path,
+      circle { stroke: var(--primary-color); }
     }
   }
   &.light {
     .icon {
       circle { fill: var(--yellow); }
+
+      path,
+  circle { stroke: var(--inverted-color); }
     }
   }
 }
@@ -37,7 +43,6 @@
 .icon {
   width: 24px;
   vertical-align: bottom;
-  path, circle { fill: transparent; }
   path,
-  circle { stroke: var(--primary-color); }
+  circle { fill: transparent; }
 }

@@ -5,7 +5,7 @@
 
 body {
   font-family: consolas, "Open Sans", serif;
-  color: var(--primary-color);
+  color: var(--inverted-color);
 }
 
 h1 {
@@ -71,4 +71,10 @@ select {
   padding: 0 20px 0 10px;
   outline: none;
   font-size: 17px;
+
+  &[disabled] {
+    cursor: auto;
+    background: var(--navbar-links-bg-hover);
+    color: var(--inverted-color);
+  }
 }

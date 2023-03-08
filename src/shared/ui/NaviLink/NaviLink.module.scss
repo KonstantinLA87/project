@@ -9,13 +9,7 @@
   position: relative;
 
   &:hover {
-    color: var(--navbar-links-hover);
     background: var(--navbar-links-bg-hover);
-
-    svg path,
-    svg circle {
-      stroke: var(--navbar-links-hover);
-    }
   }
 
   svg {

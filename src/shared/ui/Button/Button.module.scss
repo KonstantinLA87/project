@@ -45,11 +45,6 @@
 
   &:hover {
     background: var(--navbar-links-bg-hover);
-    color: var(--navbar-links-hover);
-
-    path {
-      stroke: var(--navbar-links-hover);
-    }
   }
 }
 
