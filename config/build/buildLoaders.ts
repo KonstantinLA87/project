@@ -1,16 +1,21 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 import { buildCssLoader } from './loaders/buildCssLoader';
 import { buildSvgLoader } from './loaders/buildSvgLoader';
 import { BuildOptions } from './types/config';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
-export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
+  const { isDev } = options;
+
   // Typescript
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
   };
+
+  // Babel
+  const babelLoader = buildBabelLoader(options);
 
   // SVG
   const svgLoader = buildSvgLoader();
@@ -28,5 +33,11 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   // SCSS
   const cssLoader = buildCssLoader(isDev);
 
-  return [typescriptLoader, cssLoader, svgLoader, fileLoader];
+  return [
+    fileLoader,
+    svgLoader,
+    babelLoader,
+    typescriptLoader,
+    cssLoader,
+  ];
 }

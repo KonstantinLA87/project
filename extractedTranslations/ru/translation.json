@@ -1,14 +1,10 @@
 {
   "Incorrect user data": "Incorrect user data",
-  "Login": "",
-  "Logout": "",
-  "NaviLinks": {
-    "about": "",
-    "main": ""
-  },
-  "Password": "",
-  "Reload page": "",
-  "Sign In": "",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Password": "Password",
+  "Reload page": "Reload page",
+  "Sign In": "Sign In",
   "Username": "Username",
   "Wrong age value": "Wrong age value",
   "Wrong country value": "Wrong country value",
@@ -19,19 +15,14 @@
   "edit": "edit",
   "incorrect server data": "incorrect server data",
   "lastname": "lastname",
-  "login": "",
-  "login error": "",
+  "login": "login",
+  "login error": "login error",
   "name": "name",
-  "navlinks": {
-    "about": "",
-    "main": ""
-  },
-  "not_found": "",
-  "pageError": "",
+  "not_found": "not_found",
+  "pageError": "pageError",
   "profile error body": "profile error body",
   "profile error title": "profile error title",
   "save": "save",
   "title": "title",
-  "your age": "your age",
-  "Вы ввели неверный логин или пароль": ""
+  "your age": "your age"
 }
