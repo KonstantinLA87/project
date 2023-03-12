@@ -3,7 +3,8 @@
   "NaviLinks": {
     "main": "Home",
     "about": "About us",
-    "profile": "Profile"
+    "profile": "Profile",
+    "articles": "Articles"
   },
   "not_found": "Page not found",
   "pageError": "Something Goes Wrong",

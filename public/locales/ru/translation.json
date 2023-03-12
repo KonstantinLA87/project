@@ -3,7 +3,8 @@
   "NaviLinks": {
     "main": "Главная",
     "about": "О нас",
-    "profile": "Профиль"
+    "profile": "Профиль",
+    "articles": "Статьи"
   },
   "not_found": "Страница не найдена",
   "pageError": "Что то пошло не так",
