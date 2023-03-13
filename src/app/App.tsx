@@ -6,7 +6,6 @@ import { Sidebar } from 'widgets/Sidebar';
 import { FC, Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from 'entities/User';
-import { useNavigate } from 'react-router';
 import { getUserInited } from '../entities/User/model/selectors/getUserInited/getUserInited';
 
 const App: FC = () => {

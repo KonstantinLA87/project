@@ -81,7 +81,7 @@ const ProfilePage: FC<ProfilePageProps> = memo(({ className }) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames('', {}, [className])}>
+      <>
         <ProfilePageHeader />
         <div className={cls.validateErrorsWrapper}>
           {validateErrors?.length && validateErrors.map(err => (
@@ -106,7 +106,7 @@ const ProfilePage: FC<ProfilePageProps> = memo(({ className }) => {
           onChangeCountry={onChangeCountry}
           readOnly={readOnly}
         />
-      </div>
+      </>
     </DynamicModuleLoader>
   );
 });

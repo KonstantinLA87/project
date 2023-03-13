@@ -1,5 +1,6 @@
 {
   "Incorrect user data": "Incorrect user data",
+  "Loading page error": "Loading page error",
   "Login": "Login",
   "Logout": "Logout",
   "Password": "Password",
@@ -10,6 +11,7 @@
   "Wrong country value": "Wrong country value",
   "Wrong data value": "Wrong data value",
   "Your city": "Your city",
+  "article not found": "article not found",
   "avatar": "avatar",
   "cancel": "cancel",
   "edit": "edit",
